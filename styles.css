@@ -1,0 +1,98 @@
+/*
+header {
+     outline: 2px solid red;
+}
+
+nav {
+     outline: 2px solid royalblue;
+}
+
+main {
+     outline: 2px solid rebeccapurple;
+}
+
+aside {
+     outline: 2px solid green;
+}
+
+footer {
+     outline: 2px solid palevioletred;
+}
+*/
+
+
+body {
+     margin: 0;
+     font-family: "Helvetica Nueue", Helvetica, Arial, sans-serif;
+}
+
+/* Layout */
+.grid {
+     min-height: 100vh;
+     max-width: 960px;
+     margin: 0 auto; 
+     display: grid;
+
+     /* fr is parts per grid (basically) */
+     grid-template-columns: 1fr 2fr;
+     grid-template-rows: 100px 50px auto 100px;
+     grid-template-areas: "head head"
+                          "aside nav"
+                          "aside main"
+                          "foot foot";
+     gap: 20px;
+}
+
+header {
+     grid-area: head;
+     background-color: dodgerblue;
+     color: white;
+     padding: 25px;
+     display: flex;
+     align-items: center;
+}
+
+aside {
+     grid-area: aside;
+}
+
+footer {
+     grid-area: foot;
+}
+
+nav {
+     grid-area: nav;
+}
+
+main {
+     grid-area: main;
+}
+
+img {
+     max-width: 100%;
+}
+
+/* Navigation Items */
+.nav {
+     display: flex;
+     background-color: rgb(137, 222, 87);
+     align-items: center;
+     gap: 20px;
+     padding: 20px;
+}
+
+.nav-link {
+     color: black;
+     display: block;
+     padding: 10px 20px;
+     border: 1px solid #ccc;
+     background-color: #eee;
+     text-decoration: none;
+}
+
+/* HOVER STATE + FOCUS CODE */
+.nav-link:hover,
+.nav-link:focus {
+     background-color: dodgerblue;
+     color: white;
+}
